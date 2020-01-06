@@ -1,0 +1,13 @@
+
+<div [innerHTML]="htmlContent" (click)="firstClick();"></div>
+<h1>
+    {{appTitle}}
+</h1>
+
+<h2 [ngClass]="{'text-align': left}">Users:</h2>
+<ul *ngIf="users">
+    <li *ngFor="let user of users.data">
+        <img [src]="user.avatar"/>
+        <p>{{user.first_name}}{{user.last_name}}</p>
+    </li>
+</ul>
